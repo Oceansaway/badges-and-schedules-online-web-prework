@@ -22,3 +22,12 @@ attendees.each_with_index do |attendees,index|
 end
 return room_assignments
 end
+
+def printer(attendees)
+  batch_badge_creator(attendees).each do |badge|
+    puts badge
+  end
+  assign_rooms(attendees).each do |rooms|
+    puts rooms
+  end
+end
